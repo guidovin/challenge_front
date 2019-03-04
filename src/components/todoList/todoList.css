@@ -1,0 +1,52 @@
+.responsiveText {
+    font-size: 2em;
+    word-wrap: break-word;
+}
+.todoWrapper{
+  display: flex;
+  justify-content: space-between;
+}
+.todoTextWrapper{
+  max-width: 60vw;
+  overflow: hidden;
+  font-family: Mosk;
+  font-size: 1.2em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.checkButton{
+  min-width: 7vw;
+}
+.deleteButton{
+  min-width: 7vw;
+}
+.todo{
+  margin-bottom: 5px;
+}
+
+.inactiveTodo{
+  text-decoration: line-through;
+  background-color: rgb(252, 181, 181) !important;
+}
+.activeTodo{
+  background-color: rgb(217, 249, 220) !important;
+}
+@media(max-width: 768px) {
+  .responsiveText {
+    font-size: 1.7em;
+
+  }
+  .responsiveContainer{
+    width: 100%;
+
+  }
+}
+@media (max-width:340px) {
+  .todoTextWrapper{
+    font-size: 0.8em;
+  }
+}

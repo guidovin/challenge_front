@@ -1,0 +1,16 @@
+.responsive{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.submit{
+  position: relative;
+  right: 35px;
+  padding-top:9px;
+}
+.todoWrapper{
+  margin-bottom: 5px;
+}
+.todoInput{
+  width:100%;
+}
