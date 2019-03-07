@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import InterfaceNavbar from './components/interfaceNavbar';
 import TodoList from './components/todoList';
-import { Container, Header, Segment } from "semantic-ui-react";
+import { Container,  Segment } from "semantic-ui-react";
 import 'semantic-ui-css/semantic.min.css'
 import './App.css'
 class App extends Component {
@@ -94,6 +94,8 @@ class App extends Component {
 
   componentDidMount() {
     let userID = window.location.pathname.split('/')[2];
+    if(userID===undefined) userID='User';
+    console.log('this is the actual userID: '+userID);
     fetch('http://localhost:4000/todos/'+userID)
     .then(res => {return res.json()})
     .then(todoList =>{this.setState({todos:todoList}); })

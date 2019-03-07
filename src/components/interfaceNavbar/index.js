@@ -16,7 +16,9 @@ export default class InterfaceNavbar extends Component {
     this.setState({showForm:!this.state.showForm});
   }
   render() {
-    let userId = window.location.pathname.split('/')[2];
+    let userID = window.location.pathname.split('/')[2];
+    if (userID === undefined) userID = 'User';
+
     const { activeItem } = this.state;
     return (
       <Menu>
@@ -32,12 +34,23 @@ export default class InterfaceNavbar extends Component {
         <Menu.Menu position='right' className="todoInput">
           <div className='ui right aligned category search item todoInput'>
             <div className='ui transparent icon input todoInput'>
-              <input className='prompt' name="todoText" type='text'
-                placeholder='Todo name...' onChange={(e)=>this.setState({postText:e.target.value})} />
-
+              <input className='prompt' id='inputText' name="todoText" type='text' placeholder='Todo name...'
+                onKeyUp= {(e) => {
+                  if(e.key ==='Enter') {
+                    this.props.createTodo({text:this.state.postText, userID:userID})
+                    document.getElementById('inputText').value = ''
+                  }
+                }}
+                onChange={(e)=>this.setState({postText:e.target.value})}
+              />
             </div>
           </div>
-          <i className='right arrow link icon submit' onClick= {() => this.props.createTodo({text:this.state.postText, userID:userId})} />
+          <i className='right arrow link icon submit'
+
+            onClick= {() =>{
+              this.props.createTodo({text:this.state.postText, userID:userID})
+              document.getElementById('inputText').value = '' }}
+          />
         </Menu.Menu>
 
 
