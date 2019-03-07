@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InterfaceNavbar should render correctly in "debug" mode 1`] = `
+<Menu>
+  <MenuItem
+    active={false}
+    className="viewTogle"
+    name="showCompleted"
+    onClick={[Function]}
+    position="left"
+  >
+    Showing active
+  </MenuItem>
+  <MenuMenu
+    className="todoInput"
+    position="right"
+  >
+    <div
+      className="ui right aligned category search item todoInput"
+    >
+      <div
+        className="ui transparent icon input todoInput"
+      >
+        <input
+          className="prompt"
+          id="inputText"
+          name="todoText"
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          placeholder="Todo name..."
+          type="text"
+        />
+      </div>
+    </div>
+    <i
+      className="right arrow link icon submit"
+      onClick={[Function]}
+    />
+  </MenuMenu>
+</Menu>
+`;

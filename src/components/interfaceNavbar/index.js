@@ -5,15 +5,12 @@ import './navbar.css'
 export default class InterfaceNavbar extends Component {
   constructor(props){
     super(props);
-    this.state={activeItem:"", showForm:'false', postText:''};
+    this.state={activeItem:"", postText:''};
   }
 
   togle = (e,{name}) => {
     this.setState({activeItem:{name}});
     this.props.togleCompleted();
-  }
-  showForm = (e,{name}) => {
-    this.setState({showForm:!this.state.showForm});
   }
   render() {
     let userID = window.location.pathname.split('/')[2];
@@ -23,6 +20,7 @@ export default class InterfaceNavbar extends Component {
     return (
       <Menu>
         <Menu.Item
+          className="viewTogle"
           name='showCompleted'
           position="left"
           active={activeItem === 'showCompleted'}

@@ -21,10 +21,10 @@ const TodoList = ({ todos , showCompleted, updateTodo, deleteTodo}) => {
                     <div className= "buttonWrapper">
                       <Button className= "checkButton" position='right' animated style={{backgroundColor:'inherit'}} onClick= {() => updateTodo(todo)} >
                         <Button.Content visible>
-                          <Icon name='check square outline large' />
+                          <Icon className='check square outline large' />
                         </Button.Content>
                         <Button.Content hidden>
-                          <Icon name='check square large' />
+                          <Icon className='check square large' />
                         </Button.Content>
                       </Button>
                       <Button className= "deleteButton" animated style={{backgroundColor:'inherit'}} onClick= {() => deleteTodo(todo)}>
@@ -71,7 +71,7 @@ const TodoList = ({ todos , showCompleted, updateTodo, deleteTodo}) => {
                       <p>{todo.text}</p>
                     </div>
                     <div className= "buttonWrapper">
-                      <Button className= "checkButton" position='right' animated style={{backgroundColor:'inherit'}} onClick= {() => updateTodo(todo)}>
+                      <Button className= "checkButton"  position='right' animated style={{backgroundColor:'inherit'}} onClick= {() => updateTodo(todo)}>
                         <Button.Content visible>
                           <Icon name='check square outline large' />
                         </Button.Content>

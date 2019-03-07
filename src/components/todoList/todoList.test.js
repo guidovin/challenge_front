@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import MyComponent from './MyComponent';
+import TodoList from './index.js';
 
-describe('MyComponent', () => {
-  it('should render correctly in "debug" mode', () => {
+describe('TodoList', () => {
+  it('should render correctly', () => {
 
-    const component = shallow(<MyComponent debug />);
+    const component = shallow(<TodoList />);
 
     expect(component).toMatchSnapshot();
   });
