@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import InterfaceNavbar from './components/interfaceNavbar';
-import TodoList from './components/todoList';
+import TodoList from './components/todoList'; //components are named index inside their respective folders for cleaner imports.
 import { Container,  Segment } from "semantic-ui-react";
 import 'semantic-ui-css/semantic.min.css'
 import './App.css'
 class App extends Component {
   constructor(){
     super();
-    this.state = {showCompleted:false, showTodoForm:false , todos:[]};
+    this.state = {showCompleted:false , todos:[]};
   };
 
   togleForm = () => this.setState({showTodoForm: !this.state.showTodoForm});

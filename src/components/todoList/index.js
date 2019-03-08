@@ -36,7 +36,7 @@ const TodoList = ({ todos , showCompleted, updateTodo, deleteTodo}) => {
                   </Segment>
               </div>
             )
-            return;
+            return(<div></div>);
           }
 
           return(

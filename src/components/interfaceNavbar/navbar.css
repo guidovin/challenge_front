@@ -1,16 +1,42 @@
 .responsive{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: space-between;
 }
+.responsiveMenu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .submit{
-  position: relative;
-  right: 35px;
-  padding-top:9px;
+  position: left;
+}
+.prompt{
+  min-width:180px;
 }
 .todoWrapper{
   margin-bottom: 5px;
 }
+.viewTogle{
+  max-width: 30vw;
+  margin:0px;
+}
+.left.item.viewTogle{
+  max-width: 100%;
+}
 .todoInput{
+  position:left;
+  width:calc(100%-125px);
+}
+.left.menu{
+  flex-grow: 1;
+}
+.ui.left.search.item{
   width:100%;
+}
+@media (max-width: 440px) {
+  .left.menu{
+    width: 40vw;
+  }
 }

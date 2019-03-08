@@ -1,12 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 import TodoList from './index.js';
 
 describe('TodoList', () => {
   it('should render correctly', () => {
 
-    const component = shallow(<TodoList />);
+    const component = mount(<TodoList />);
 
     expect(component).toMatchSnapshot();
   });

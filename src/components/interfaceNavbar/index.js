@@ -18,7 +18,7 @@ export default class InterfaceNavbar extends Component {
 
     const { activeItem } = this.state;
     return (
-      <Menu>
+      <Menu className='responsiveMenu'>
         <Menu.Item
           className="viewTogle"
           name='showCompleted'
@@ -29,8 +29,8 @@ export default class InterfaceNavbar extends Component {
         {!this.props.showCompleted ? 'Showing active' : 'Showing all'}
 
         </Menu.Item>
-        <Menu.Menu position='right' className="todoInput">
-          <div className='ui right aligned category search item todoInput'>
+        <Menu.Menu position='left'>
+          <div className='ui left aligned category search item'>
             <div className='ui transparent icon input todoInput'>
               <input className='prompt' id='inputText' name="todoText" type='text' placeholder='Todo name...'
                 onKeyUp= {(e) => {
@@ -42,13 +42,12 @@ export default class InterfaceNavbar extends Component {
                 onChange={(e)=>this.setState({postText:e.target.value})}
               />
             </div>
+            <i className='right arrow link icon submit'
+              onClick= {() =>{
+                this.props.createTodo({text:this.state.postText, userID:userID})
+                document.getElementById('inputText').value = '' }}
+            />
           </div>
-          <i className='right arrow link icon submit'
-
-            onClick= {() =>{
-              this.props.createTodo({text:this.state.postText, userID:userID})
-              document.getElementById('inputText').value = '' }}
-          />
         </Menu.Menu>
 
 
